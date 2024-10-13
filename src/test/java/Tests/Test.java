@@ -17,7 +17,8 @@ public class Test {
 
 @org.testng.annotations.Test
    public void get(){
-     Re.get(null,EndPoints.listUsers).then().statusCode(200);
+     Re.get(EndPoints.listUsers)
+             .then().statusCode(200);
 
     }
     @org.testng.annotations.Test

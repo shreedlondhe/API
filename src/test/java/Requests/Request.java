@@ -19,6 +19,13 @@ public Response get(Map<String,String> headers, String endpoints){
             .spec(SpecBuilder.ResponceSpecBuilder())
              .log().ifError().extract().response();
     }
+    public Response get( String endpoints){
+
+        return RestAssured.given().spec(SpecBuilder.RequestSpecBuilder()).when().get(endpoints)
+                .then()
+                .spec(SpecBuilder.ResponceSpecBuilder())
+                .log().ifError().extract().response();
+    }
 
 
 public Response post(Map<String,String> headers, String payload, String endpoints){
