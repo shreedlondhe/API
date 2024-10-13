@@ -20,7 +20,7 @@ public class SpecBuilder {
 
         prob=new Properties();
         try {
-            prob.load(new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Config\\config.properties"));
+            prob.load(new FileInputStream(System.getProperty("user.dir")+"/src/main/java/Config/config.properties"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
