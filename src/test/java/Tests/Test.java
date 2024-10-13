@@ -1,17 +1,23 @@
 package Tests;
 
-import ReqResBuilder.Builder;
+
+import Endpoints.EndPoints;
+import Requests.Request;
+import org.testng.annotations.*;
 
 public class Test {
 
-@org.testng.annotations.Test
-    void get(){
-        System.out.println("inside get method");
+    static Request Re;
+    @BeforeMethod
+    public static void setup(){
+        Re=new Request();
     }
-@org.testng.annotations.Test
-void post(){
-    System.out.println("inside post method");
-}
+
+  @org.testng.annotations.Test
+   public void get(){
+     Re.get(EndPoints.listUsers);
+
+    }
 
 
     }
